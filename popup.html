@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Spotify Mini Player</title><link rel="stylesheet" href="style.css"></head>
+<body class="popup"><main>
+<header><div class="eyebrow">SPOTIFY MINI PLAYER</div><button id="setup" class="secondary compact" aria-label="Open account setup">⚙</button></header>
+<div class="art"><span aria-hidden="true">♫</span><img id="cover" alt="Album artwork" hidden></div>
+<h1 id="track">Choose your music.</h1><p id="artist">Pick a playlist below to get started.</p>
+<label class="sr-only" for="seek">Playback position</label><input id="seek" type="range" min="0" max="1" value="0" disabled>
+<div class="times"><span id="elapsed">0:00</span><span id="duration">0:00</span></div><p id="device"></p>
+<div class="controls">
+<button id="shuffle" data-command="shuffle" aria-label="Shuffle" aria-pressed="false" title="Shuffle" disabled>⤨</button>
+<button data-command="previousTrack" aria-label="Previous track" disabled>⏮</button>
+<button id="toggle" data-command="togglePlay" aria-label="Play on this PC" disabled>▶</button>
+<button data-command="nextTrack" aria-label="Next track" disabled>⏭</button>
+<button id="repeat" data-command="repeat" aria-label="Repeat: off. Click to change." aria-pressed="false" disabled>↻</button>
+</div>
+<div class="volume"><label for="volume">Volume</label><input id="volume" type="range" min="0" max="100" value="50" disabled></div>
+<button id="play" hidden>Continue on this PC</button><p id="status" role="status" aria-live="polite">Checking your connection…</p>
+<button id="reconnect" class="secondary" hidden>Connect Spotify</button>
+<div class="library">
+<div class="view-switch" role="group" aria-label="Music view">
+<button id="show-playlists" aria-pressed="true" aria-controls="playlists-panel">Your playlists</button>
+<button id="show-queue" aria-pressed="false" aria-controls="queue-panel">Queue</button>
+</div>
+<section id="playlists-panel" class="music-panel" aria-label="Your playlists">
+<header><h2>Your playlists</h2><button id="refresh-library" class="secondary compact" aria-label="Refresh playlists">↻</button></header>
+<p id="library-status" role="status">Loading playlists…</p><div id="playlists"></div><button id="more" class="secondary" hidden>Load more</button>
+<div id="playlist-detail" hidden><button id="back-library" class="secondary">← Your playlists</button><h3 id="playlist-name"></h3><button id="play-playlist">Play playlist on this PC</button><p id="playlist-status" role="status"></p><div id="playlist-tracks"></div><button id="more-tracks" class="secondary" hidden>Load more songs</button></div>
+</section>
+<section id="queue-panel" class="music-panel" aria-label="Playback queue" hidden>
+<header><h2>Queue</h2><button id="refresh-queue" class="secondary compact" aria-label="Refresh queue">↻</button></header>
+<ul id="queue-current"></ul><p id="queue-status" role="status">Open to load your queue.</p><ol id="queue"></ol>
+</section>
+</div>
+<details><summary>Play from a link</summary><label for="uri">Spotify link</label><input id="uri" type="text" placeholder="https://open.spotify.com/…"><button id="load" class="secondary" disabled>Play link</button></details>
+<small>Spotify Mini Player · v0.5.0</small></main><script src="popup.js"></script></body></html>

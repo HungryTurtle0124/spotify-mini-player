@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Connect Spotify</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<div class="eyebrow">SPOTIFY MINI PLAYER · EXPERIMENTAL</div>
+<h1>Your music.<br>Your toolbar.</h1>
+<p>Connect your own Spotify Premium account. This preview uses a Spotify developer app you configure once; future visits connect automatically.</p>
+<section><h2>1. Choose your Spotify app</h2><p>Create an app in the Spotify Developer Dashboard, or use a Client ID supplied by its owner if they have added your account to their test users. A shared development app supports only a small group of approved accounts.</p>
+<label for="client-id">Spotify Client ID</label><input id="client-id" type="text" maxlength="32" autocomplete="off" spellcheck="false" placeholder="32-character Client ID"><button id="save-client" class="secondary">Save Client ID</button><p>Use the public Client ID. This extension never needs your client secret. Changing apps signs out the previous connection.</p>
+<a href="https://developer.spotify.com/dashboard" target="_blank" rel="noreferrer">Open Spotify Developer Dashboard ↗</a></section>
+<section><h2>2. Add your redirect URL</h2><p>In the chosen app’s settings, add this exact address under <strong>Redirect URIs</strong>, click <strong>Add</strong>, then <strong>Save</strong>. This address belongs to your installed extension and may differ from someone else’s.</p>
+<label for="redirect">Your extension’s redirect URL</label><input id="redirect" readonly><button id="copy" class="secondary">Copy URL</button>
+</section>
+<section><h2>3. Connect your account</h2><p>Once the Client ID and redirect address are saved, sign in below. Spotify will open a temporary authorization window. Each installation stores its own sign-in locally.</p>
+<button id="connect">Connect Spotify</button><button id="disconnect" class="secondary" hidden>Disconnect locally</button><p id="status" role="status" aria-live="polite"></p></section>
+<small>Sign-in is saved on this computer and renewed automatically, including after Chrome restarts or extension reloads. Disconnecting clears local credentials; app access can also be removed in your Spotify account. Unofficial project, not affiliated with Spotify. <a href="PRIVACY.md" target="_blank">Privacy details</a></small>
+</main><script src="setup.js"></script></body></html>

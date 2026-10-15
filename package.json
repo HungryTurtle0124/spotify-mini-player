@@ -1,0 +1,12 @@
+{
+  "name": "spotify-mini-player",
+  "version": "0.5.0",
+  "private": true,
+  "description": "Unofficial Spotify toolbar player for Chrome",
+  "scripts": {
+    "test": "node --test background.test.cjs popup.test.cjs",
+    "check": "node --check background.js && node --check popup.js && node --check offscreen.js && node --check setup.js && node --check scripts/package.cjs",
+    "build": "node scripts/package.cjs"
+  },
+  "engines": {"node": ">=22"}
+}
