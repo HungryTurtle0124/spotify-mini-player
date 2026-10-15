@@ -2,7 +2,7 @@
 
 An unofficial Chrome toolbar player with background Spotify audio, playlists, queue, shuffle, repeat, and account playback restoration. Version 0.5.0 is a developer preview.
 
-[Download the latest preview](https://github.com/HungryTurtle0124/spotify-mini-player/releases/latest) · [Install and connect](INSTALL.md) · [Privacy](PRIVACY.md)
+[Download a preview](https://github.com/HungryTurtle0124/spotify-mini-player/releases) · [Install and connect](INSTALL.md) · [Privacy](PRIVACY.md)
 
 ## Install
 
